@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode-go/minimax-m3",
+  "mcp": {
+    "hadr": {
+      "type": "remote",
+      "url": "http://localhost:8000/mcp",
+      "enabled": true
+    }
+  },
+  "permission": {
+    "*": "ask",
+    "question": "allow",
+    "hadr_*": "allow",
+    "bash": {
+      "*": "ask",
+      "curl *": "deny",
+      "curl *localhost:8000*": "allow",
+      "curl *127.0.0.1:8000*": "allow",
+      "opencode mcp list": "allow"
+    }
+  }
+}
