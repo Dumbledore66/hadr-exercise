@@ -5,3 +5,8 @@ __pycache__/
 .hadr-state/
 .pytest_cache/
 .env
+
+# Local editor and agent tooling. mcp-play/.claude/settings.json ships with the
+# course and stays tracked, so only the skills dir under it is ignored.
+.vscode/
+mcp-play/.claude/skills/
